@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import Hiragana from './Hiragana';
 import axios from 'axios';
 
-const { BACKEND_APP_SERVER_URL } = process.env;
+const { BACKEND_SERVER_URL } = process.env;
 
 
-//axios.get(`${BACKEND_APP_SERVER_URL}/${req.body.bango}`);
+//axios.get(`${BACKEND_SERVER_URL}/${req.body.bango}`);
 
 
 const Gakkou = (props) => {

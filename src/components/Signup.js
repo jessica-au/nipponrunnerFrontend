@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-const { BACKEND_APP_SERVER_URL } = process.env;
+const { BACKEND_SERVER_URL } = process.env;
 
 const Signup  = () => {
 
@@ -35,7 +35,7 @@ const Signup  = () => {
         console.log(`>>>> inside handleSubmit func`)
         if(password === confirmPassword && password.length >= 8){
             const newUser = { username, email, password }
-            axios.post(`${BACKEND_APP_SERVER_URL}/users/register`, newUser)
+            axios.post(`${BACKEND_SERVER_URL}/users/register`, newUser)
             .then(response => {
                 console.log(`>>>> new user created`)
                 console.log(response)
