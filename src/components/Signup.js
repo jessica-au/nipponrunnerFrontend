@@ -32,6 +32,7 @@ const Signup  = () => {
     }
 
     const handleSubmit = (e) => {
+        e.preventDefault()
         console.log(`>>>> inside handleSubmit func`)
         if(password === confirmPassword && password.length >= 8){
             const newUser = { username, email, password }
@@ -44,7 +45,7 @@ const Signup  = () => {
             .catch(error => console.log(`>>>> singup error: ${error}`))
         } else {
             if(password !== confirmPassword) {
-                alert('passwords dont\'t match')
+                alert('passwords dont match')
             } else if (password.length <= 7){
                 alert('password must be at least 8 characters long')
             }
