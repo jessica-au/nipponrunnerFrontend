@@ -24,33 +24,35 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         console.log(`>>>> inside handleSubmit func`)
         e.preventDefault()
-        const userData = {email, password}
+        const userData = { email, password }
 
-        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, {userData, headers: {
-            "Access-Control-Allow-Origin": "*"
-        }})
-        .then(response => {
-            console.log(`>>>>inside handleSubmit reponse block`)
+        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, {
+            userData, headers: {
+                "Access-Control-Allow-Origin": "*"
+            }, crossorigin: true
+        })
+            .then(response => {
+                console.log(`>>>>inside handleSubmit reponse block`)
 
-            console.log(response)
-            const { token } = response.data
-            //save token to localStorage
-            localStorage.setItem('jwtToken', token)
-            //set token to header
-            setAuthToken(token)
-            //decode token to get user data
-            const decoded = jwt_decode(token)
-            props.nowCurrentUser(decoded)
-        })
-        .catch(error => {
-            console.log(`>>>> error logging in ${error}`)
-            alert('incorrect email or password! please try again')
-        })
+                console.log(response)
+                const { token } = response.data
+                //save token to localStorage
+                localStorage.setItem('jwtToken', token)
+                //set token to header
+                setAuthToken(token)
+                //decode token to get user data
+                const decoded = jwt_decode(token)
+                props.nowCurrentUser(decoded)
+            })
+            .catch(error => {
+                console.log(`>>>> error logging in ${error}`)
+                alert('incorrect email or password! please try again')
+            })
     }
 
-    if(props.user) return <Redirect to="/profile" /> //redirects user to profile if log in authentication passed
+    if (props.user) return <Redirect to="/profile" /> //redirects user to profile if log in authentication passed
 
-    return(
+    return (
         <div className="loginPage">
             <h3>Login</h3>
             <form onSubmit={handleSubmit}>

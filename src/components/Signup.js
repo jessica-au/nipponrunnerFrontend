@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 const { REACT_APP_BACKEND_URL } = process.env;
 
-const Signup  = () => {
+const Signup = () => {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -34,26 +34,28 @@ const Signup  = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(`>>>> inside handleSubmit func`)
-        if(password === confirmPassword && password.length >= 8){
+        if (password === confirmPassword && password.length >= 8) {
             const newUser = { username, email, password }
-            axios.post(`${REACT_APP_BACKEND_URL}/users/register`, {...newUser, headers: {
-                "Access-Control-Allow-Origin": "*"
-            }})
-            .then(response => {
-                console.log(`>>>> new user created`)
-                console.log(response)
-                setRedirect(true)
+            axios.post(`${REACT_APP_BACKEND_URL}/users/register`, {
+                ...newUser, headers: {
+                    "Access-Control-Allow-Origin": "*"
+                }, crossorigin: true
             })
-            .catch(error => console.log(`>>>> singup error: ${error}`))
+                .then(response => {
+                    console.log(`>>>> new user created`)
+                    console.log(response)
+                    setRedirect(true)
+                })
+                .catch(error => console.log(`>>>> singup error: ${error}`))
         } else {
-            if(password !== confirmPassword) {
+            if (password !== confirmPassword) {
                 alert('passwords dont match')
-            } else if (password.length <= 7){
+            } else if (password.length <= 7) {
                 alert('password must be at least 8 characters long')
             }
         }
     }
-    if(redirect) return <Redirect to="/login/"/>
+    if (redirect) return <Redirect to="/login/" />
 
     return (
         <div className="signupComponent">
