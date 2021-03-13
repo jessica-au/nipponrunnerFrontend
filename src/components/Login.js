@@ -5,7 +5,7 @@ import jwt_decode from 'jwt-decode';
 import { Redirect } from 'react-router-dom';
 import setAuthToken from '../utils/setAuthToken';
 
-const { BACKEND_SERVER_URL } = process.env;
+const { REACT_APP_BACKEND_URL } = process.env;
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -26,7 +26,7 @@ const Login = (props) => {
         e.preventDefault()
         const userData = {email, password}
 
-        axios.post(`${BACKEND_SERVER_URL}/users/login`, userData)
+        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, userData)
         .then(response => {
             console.log(`>>>>inside handleSubmit reponse block`)
 

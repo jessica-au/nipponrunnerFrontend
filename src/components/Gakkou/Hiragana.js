@@ -3,7 +3,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import axios from 'axios'
 const shuffle = require('shuffle-array')
 
-const { BACKEND_SERVER_URL } = process.env;
+const { REACT_APP_BACKEND_URL } = process.env;
 
 const Hiragana = (props) => {
     //declare state variables
@@ -53,7 +53,7 @@ const Hiragana = (props) => {
 
     useEffect(() => {
         const fetchHira = async (req, res) => {
-            const response = await axios.get(`${BACKEND_SERVER_URL}/hira/allHira`)
+            const response = await axios.get(`${REACT_APP_BACKEND_URL}/hira/allHira`)
             console.log(response)
             const data = await response.data
             // console.log('data:', data)
