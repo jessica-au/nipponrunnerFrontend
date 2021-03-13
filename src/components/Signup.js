@@ -36,7 +36,9 @@ const Signup  = () => {
         console.log(`>>>> inside handleSubmit func`)
         if(password === confirmPassword && password.length >= 8){
             const newUser = { username, email, password }
-            axios.post(`${REACT_APP_BACKEND_URL}/users/register`, newUser)
+            axios.post(`${REACT_APP_BACKEND_URL}/users/register`, {...newUser, headers: {
+                "Access-Control-Allow-Origin": "*"
+            }})
             .then(response => {
                 console.log(`>>>> new user created`)
                 console.log(response)

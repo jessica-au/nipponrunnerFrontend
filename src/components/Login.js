@@ -26,7 +26,9 @@ const Login = (props) => {
         e.preventDefault()
         const userData = {email, password}
 
-        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, userData)
+        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, {userData, headers: {
+            "Access-Control-Allow-Origin": "*"
+        }})
         .then(response => {
             console.log(`>>>>inside handleSubmit reponse block`)
 
@@ -61,7 +63,7 @@ const Login = (props) => {
                         <label htmlFor="password">password</label>
                         <input type="password" name="password" value={password} onChange={handlePassword} />
                     </div>
-                    <button className="loginFormSubmit">login</button>
+                    <button type="submit" className="loginFormSubmit">login</button>
                 </div>
             </form>
         </div>
