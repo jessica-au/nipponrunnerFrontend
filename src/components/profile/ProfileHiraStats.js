@@ -2,7 +2,7 @@ import StatBox from './StatBox'
 import React, { useState, useEffect } from 'react';
 import './profileHiraStats.css'
 import axios from 'axios'
-const {REACT_APP_SERVER_URL} = process.env
+const {BACKEND_APP_SERVER_URL} = process.env
 
 const ProfileHiraStats = (props) => {
 
@@ -12,7 +12,7 @@ const ProfileHiraStats = (props) => {
 
     useEffect(() => {
         const fetchHira = async (req, res) => {
-            const response = await axios.get(`${REACT_APP_SERVER_URL}/hira/allHira`)
+            const response = await axios.get(`${BACKEND_APP_SERVER_URL}/hira/allHira`)
             const data = await response.data
             setAllHira(data)
         }
