@@ -15,10 +15,15 @@ const Gakkou = (props) => {
         <div className="gakkou">
             <h1>Okaeri! Welcome!</h1>
             
-            <div className="information">
+            <div className="infobox">
+            <Link to="/gakkou/howto">
+                <button type="button" className="hiraButton">
+                   Study Hiragana
+                </button>
+            </Link>
             <Link to="/gakkou/hiragana">
                 <button type="button" className="hiraButton">
-                   Learn Hiragana
+                   Practice Hiragana
                 </button>
             </Link>
             </div>

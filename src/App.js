@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import ProfileHiraStats from './components/profile/ProfileHiraStats';
 import Gakkou from './components/Gakkou/Gakkou';
 import Hiragana from './components/Gakkou/Hiragana';
+import Howto from './components/Gakkou/Howto';
 
 
 //Private routes for logged in users
@@ -87,6 +88,7 @@ function App() {
           <PrivateRoute path='/profile/stats' component={ProfileHiraStats} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute exact path='/gakkou' component={ Gakkou } user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path='/gakkou/hiragana' component={ Hiragana } user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path='/gakkou/howto' component={ Howto } user={currentUser} handleLogout={handleLogout} />
           <Route exact path='/' component={Welcome} />
           <Route path='/about' component={About} />
         </Switch>
