@@ -97,6 +97,8 @@ h1, h2, h3 {
   display:flex;
   flex-direction: row;
   justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
 }
 
 .hiragana {
