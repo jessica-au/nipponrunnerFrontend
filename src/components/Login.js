@@ -26,11 +26,7 @@ const Login = (props) => {
         e.preventDefault()
         const userData = { email, password }
 
-        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, {
-            userData, headers: {
-                "Access-Control-Allow-Origin": "*"
-            }, crossorigin: true
-        })
+        axios.post(`${REACT_APP_BACKEND_URL}/users/login`, userData)
             .then(response => {
                 console.log(`>>>>inside handleSubmit reponse block`)
 
