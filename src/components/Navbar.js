@@ -21,7 +21,8 @@ const Navbar = (props) => {
                         <div className="navProfileLink">
                             <NavLink to="/profile">Profile</NavLink>
                         </div>
-                        <div className="navLogoutLink" onClick={props.handleLogout}>Logout
+                        <div className="navLogoutLink">
+                        <a onClick={props.handleLogout}>Logout</a>
                         </div>
                     </>
                     :
