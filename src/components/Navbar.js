@@ -7,11 +7,12 @@ const Navbar = (props) => {
             <div className="navHomeLink">
                 <NavLink exact to="/">Home</NavLink>
             </div>
-<div className="navAboutLink">
-                <NavLink to="/about">About</NavLink>
-            </div>
+
             <div className="navGakkouLink">
                 <NavLink to="/gakkou">Gakkou</NavLink>
+            </div>
+        <div className="navAboutLink">
+                <NavLink to="/about">About</NavLink>
             </div>
             {
                 props.isAuth ?
