@@ -2,22 +2,22 @@ a {
     text-decoration: none;
 }
 
-/* button {
-    background-color: #f8af8d;
+button {
+    background-color: #F8C78D;
     border-style: none;
     border-radius: 5px;
     margin: 1%;
-    padding: 2% 1%;
+    padding: 5%;
     font-family: 'fredoka One', cursive;
     color: white;
     width: 150px;
     height: 50px;
-    
-  } */
+    text-align: center;
+  }
 
-  /* button:hover {
+  button:hover {
     background-color: #A7D676;
-  } */
+  }
   
   button:clicked {
     border-style:solid;
@@ -33,10 +33,10 @@ a {
     height: 800px;
 }
 
-.information {
+.informationProfile {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -45,6 +45,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-right: -2.5%;
 }
 
 .infoRight {
@@ -52,6 +53,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: -2.5%;
 }
 
 .profileHomeButton {
@@ -71,10 +73,28 @@ a {
 .navButtons {
     text-align: center;
     display: flex;
-    justify-content: center;
-    margin-top: 200px;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.profileTitle {
+    margin-bottom: -1%;
+}
+
+.profileTitle2 {
+    margin-top: -1%;
 }
 
 .valueValue {
     display: none;
+}
+
+@media only screen and (max-width: 550px){ 
+    .profileTitle {
+        margin-bottom: -2.5%;
+    }
+
+    .profileTitle2 {
+        margin-top: -2.5%;
+    }
 }

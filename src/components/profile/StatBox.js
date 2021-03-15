@@ -5,6 +5,8 @@ function StatBox(props) {
     const {item, progress} = props
     let color = "charBox"
 
+    console.log(progress)
+
     if(!progress){
         return null
     } else {
