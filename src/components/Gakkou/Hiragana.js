@@ -219,7 +219,7 @@ const Hiragana = (props) => {
     return (
 
         <div className="hiraContainer">
-            <div> Match the hiragana character to its sound</div>
+            <div> Match the hiragana character to its sound.  Not sure or need a refresher? Check out the study page!</div>
             <div className="hiraRow">
                 {hiraList}
             </div>
