@@ -4,16 +4,13 @@
 body {
   text-align: center;
   font-family: 'Fredoka One', cursive;
-  /* background-image: url("./images/cute-japanese-senior-high-school-students-with-board-free-vector.jpg"); */
-  /* background-size: 100%;
-  background-repeat:no-repeat;
-  background-position:top; */
   background-color: #47CACC;
   margin: 0;
   color: white;
   align-self: center;
   background-image: url("./images/bambooBG.png");
   background-repeat: space;
+  margin-bottom: 80px;
 }
 
 h1, h2, h3 {
@@ -68,7 +65,7 @@ h1, h2, h3 {
   background-color: #F8C78D;
 }
 
-.loginPage, .signupComponent, .howto {
+.loginPage, .signupComponent {
   font-family: Arial, Helvetica, sans-serif;
   position:absolute;
   background-color: #f8af8d;
@@ -80,75 +77,29 @@ h1, h2, h3 {
   text-align: right;
 }
 
-.information, .gakkou, .about {
+.welcome {
+  font-family: Arial, Helvetica, sans-serif;
+  position:absolute;
+  background-color: #f8af8d;
+  color: white;
+  padding: 3%;
+  margin: 5% 25%;
+  border-radius: 8px;
+}
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  position:absolute;
+  background-color: #f8af8d;
+  color: white;
+  padding: 3%;
+  margin: 5% 25%;
+  border-radius: 8px;
+}
+
+.information, .gakkou {
   position: absolute;
   margin: 5% 5%;
   align-self: center;
-
-  /* width: 50%; */
-}
-
-.hiraContainer, .infobox {
-  display: flex;
-  padding: 2%;
-  border-radius: 8px;
-  text-align: center;
-  flex-direction: column;
- 
-  
-}
-.hiraRow {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 80%;
-  flex-wrap: wrap;
-}
-
-.hiragana {
-  width: 110px;
-  height: 110px;
-  font-size: 32px;
-  color: white;
-  border-style: none;
-  padding: 3% 0;
-  margin: 1%;
-  background-color: #F8C78D;
-  border-radius: 8px;
-}
-
-button {
-  background-color: #f8af8d;
-  border-style: none;
-  border-radius: 5px;
-  margin: 1%;
-  padding: 2% 1%;
-  font-family: 'fredoka One', cursive;
-  color: white;
-  width: 150px;
-  height: 50px;
-}
-
-button:hover {
-  background-color: #A7D676;
-}
-
-button:clicked {
-  border-style:solid;
-  border-color: grey;
-  border-radius: 8px;
-}
-
-.disabledButton { 
-  width: 100px;
-  height: 100px;
-  font-size: 36px;
-  color: white;
-  border-style: none;
-  padding: 3% 0;
-  margin: 1%;
-  border-radius: 8px;
-  background-color: #A7D676;
 }
 
 
@@ -161,7 +112,6 @@ button:clicked {
   left:0;
   width: 100%;
   color: white;
-
 }
 
 .welcomeParagraph {

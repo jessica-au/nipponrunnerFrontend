@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import Hiragana from './Hiragana';
 import axios from 'axios';
+import './gakkou.css';
 
 const { REACT_APP_BACKEND_URL } = process.env;
 
