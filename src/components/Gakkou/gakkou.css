@@ -10,7 +10,7 @@
     text-align: right;
   }
   
-  .information, .gakkou, .about {
+  .information, .gakkou {
     position: absolute;
     margin: 5% 5%;
     align-self: center;
