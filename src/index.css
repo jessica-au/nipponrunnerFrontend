@@ -24,7 +24,10 @@ h1, h2, h3 {
   background-color: #A7D676;
   position: relative;
   padding: 1% 2%;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .englishName {
