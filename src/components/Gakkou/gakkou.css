@@ -24,15 +24,14 @@
     border-radius: 8px;
     text-align: center;
     flex-direction: column;
-   
-    
   }
+
   .hiraRow {
     display:flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
     flex-wrap: wrap;
+    
   }
   
   .hiragana {
