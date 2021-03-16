@@ -10,9 +10,8 @@ body {
   align-self: center;
   background-image: url("./images/bambooBG.png");
   background-attachment: fixed;
-  /* background-size: 100%; */
+   background-size: contain;
   background-repeat:no-repeat;
-  /* background-position:top; */
   margin-bottom: 80px;
 }
 
